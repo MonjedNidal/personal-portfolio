@@ -8,18 +8,27 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .navbar {
   display: flex;
   justify-content: end;
-  height: 4rem;
   width: 100%;
+  position: absolute;
+  top: 0px;
+  min-width: 20rem !important;
 }
 .nav-list {
   display: flex;
   list-style: none;
-  width: fit-content;
-  padding: 3rem;
+  margin: 2rem;
+}
+.nav-list .list-item:first-child {
+  color: var(--orange);
 }
 .list-item {
   display: flex;
@@ -34,11 +43,95 @@ body {
 }
 .list-item img {
   width: 1.4rem;
-  fill: #d1884f;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 55rem;
+  height: fit-content;
+}
+section {
+  padding: 0rem 2rem;
+}
+section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+section h1 span {
+  color: var(--orange);
+}
+section .section-head {
+  color: var(--lightBlue);
+}
+section footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+footer a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0.3rem 1.2rem;
+  border-radius: 7px;
+}
+footer .hire-btn {
+  color: white;
+  background-color: var(--blue);
+  box-shadow: 0px 5px 25px 0px var(--lightBlue);
+}
+footer .projects-btn {
+  color: var(--blue);
+  background-color: white;
+  border: 1px solid var(--blue);
+  box-shadow: 0px 1px 5px 0px var(--lightBlue);
+}
+aside {
+  height: 100%;
+  padding: 0rem 2rem;
+}
+aside img {
+  width: 23rem;
+  border-radius: 10%;
+}
+
+@media (max-width: 810px) {
+  .nav-list {
+    margin: 2rem 0rem;
+  }
+  section {
+    padding: 0rem 1rem;
+  }
+  aside {
+    padding: 0rem 1rem;
+  }
+  aside img {
+    width: 20rem;
+  }
+}
+@media (max-width: 690px) {
+  body {
+    justify-content: start;
+    padding-bottom: 2rem;
+  }
+  .navbar {
+    justify-content: space-around;
+    position: relative;
+  }
+  .list-item {
+    margin: 0rem 0.5rem;
+  }
+  ul {
+    padding: 0px;
+  }
+  main {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  aside img {
+    width: 100%;
+  }
 }
