@@ -1,5 +1,44 @@
-:root{
-    --orange: #D1884F;
-    --blue: #008AAA;
-    --lightBlue: #3BBADB;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --orange: #d1884f;
+  --blue: #008aaa;
+  --lightBlue: #3bbadb;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: end;
+  height: 4rem;
+  width: 100%;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  width: fit-content;
+  padding: 3rem;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  margin: 0rem 1rem;
+}
+.list-item:hover {
+  cursor: pointer;
+}
+.list-item p {
+  padding-left: 0.7rem;
+}
+.list-item img {
+  width: 1.4rem;
+  fill: #d1884f;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
